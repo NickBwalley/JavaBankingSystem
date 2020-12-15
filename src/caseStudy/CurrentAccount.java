@@ -35,15 +35,10 @@ public class CurrentAccount extends BankAccount //inheritance
 		System.out.println();
 	}
 
-	/*
-	 * public double getBalance() { return balance; }
-	 */
-	
 	protected void finalize()
 	{	//This is a de-constructor
 		System.out.println("Object is destroyed by the CurrentAccount Class!..\n");
 	}
-
 }
 
 /*VERY IMPORTANT DEFINITIONS!..
@@ -53,4 +48,3 @@ public class CurrentAccount extends BankAccount //inheritance
  * Inheritance: This is the mechanism in which one class acquires the property of another class. 
  * Overloading: Occurs when two or more methods in one class have the same methods name but different parameters.
  * Overriding: Occurs when two methods have the same method name and parameters.*/
- */

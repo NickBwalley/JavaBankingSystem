@@ -21,7 +21,7 @@ abstract class pinChecker{
 	
 }
 class Verification extends pinChecker{
-	
+	//Data Abstraction
 }
 public class BankAccount {
 
