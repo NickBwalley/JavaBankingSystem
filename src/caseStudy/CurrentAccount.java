@@ -1,6 +1,7 @@
 package caseStudy;
 
-public class CurrentAccount extends BankAccount {
+public class CurrentAccount extends BankAccount  //inheritance
+{
 	private String name;
 	private int accNo;
     private final int PIN = 1234; 

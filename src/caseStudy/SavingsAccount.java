@@ -1,6 +1,6 @@
 package caseStudy;
 
-public class SavingsAccount extends BankAccount
+public class SavingsAccount extends BankAccount //inheritance
 {
 	private double balance;
 	private double interest;
