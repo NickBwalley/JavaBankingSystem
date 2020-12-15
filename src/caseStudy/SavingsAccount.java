@@ -1,14 +1,27 @@
 package caseStudy;
-
+import java.util.Scanner;
 public class SavingsAccount extends BankAccount //inheritance
 {
 	private double balance;
 	private double interest;
-
-	public SavingsAccount()
+	private String name;
+	private int accNo;
+    private final int PIN = 1234; 
+    private int PIN2;
+    public void pinChecker() {
+    	Scanner input = new Scanner(System.in);
+		System.out.println("Enter Account No: ");
+		accNo = input.nextInt();
+		do {
+		System.out.println("Enter PIN: ");
+		PIN2 = input.nextInt();
+		}while(PIN2 != PIN);
+	
+    }
+	public SavingsAccount() // this is a constructor
 	{
 		balance = 0;
-		interest = 0;
+		interest = 0;	
 	}
 
 	public SavingsAccount(double initialBalance, double initialInterest)
