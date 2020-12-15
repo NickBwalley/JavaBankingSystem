@@ -2,13 +2,16 @@ package caseStudy;
 import java.util.Scanner;
 public class CurrentAccount extends BankAccount //inheritance
 {
-	private double balance;
+	private double balance = 400; //current balance stored in the database. The system computes and updates after user transaction
 	private String name;
 	private int accNo;
-    private final int PIN = 1234; //default PIN  
+    private final int PIN = 1234; //default PIN  stored in the database can be manipulated by the user
     private int PIN2;
+    private double deposit;
+    private double withdraw;
+    Scanner input = new Scanner(System.in);
     public void pinChecker() {
-    	Scanner input = new Scanner(System.in);
+    	
     	System.out.println("*******************************");
     	System.out.println("I-LAB CURRENT ACCOUNT!..");
 		System.out.println("Enter Account No: ");
@@ -17,11 +20,12 @@ public class CurrentAccount extends BankAccount //inheritance
 		System.out.println("Enter PIN: ");
 		PIN2 = input.nextInt();
 		}while(PIN2 != PIN);
+		//input.close();
 	
     }
 	public CurrentAccount() // this is a constructor
 	{
-		balance = 0;
+		//balance = 0;
 	}
 
 	public CurrentAccount(double initialBalance)
@@ -29,20 +33,27 @@ public class CurrentAccount extends BankAccount //inheritance
 		balance = initialBalance;
 	}	
 
-	public void deposit(double amount)
+	public void deposit()
 	{
-		balance = balance + amount;
+		System.out.println("How much money do you want to deposit: ");
+		deposit = input.nextDouble();
+		balance = balance + deposit;
+		System.out.printf("Current Balance: " + balance );
+		System.out.println();
 	}
 
-	public void withdraw(double amount)
+	public void withdraw()
 	{
-		balance = balance - amount;
+		System.out.println("How much money do you want to withdraw");
+		withdraw = input.nextDouble();
+		balance = balance-withdraw;
+		System.out.printf("Current Balance: " +  balance);
+		System.out.println();
 	}
 
-	public double getBalance()
-	{
-		return balance;
-	}
+	/*
+	 * public double getBalance() { return balance; }
+	 */
 	
 	protected void finalize()
 	{	//This is a de-constructor
