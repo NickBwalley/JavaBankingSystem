@@ -1,6 +1,6 @@
 package caseStudy;
 
-public class LoansAccount {
+public class LoansAccount extends BankAccount {
 	public LoansAccount() {
 		System.out.println("This is the LoansAccount!..");
 	}
