@@ -10,6 +10,8 @@ public class SavingsAccount extends BankAccount //inheritance
     private int PIN2;
     public void pinChecker() {
     	Scanner input = new Scanner(System.in);
+    	System.out.println("******************************");
+    	System.out.println("I-LAB SAVINGS ACCOUNT!..");
 		System.out.println("Enter Account No: ");
 		accNo = input.nextInt();
 		do {
