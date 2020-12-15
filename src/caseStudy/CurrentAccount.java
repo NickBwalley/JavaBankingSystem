@@ -3,26 +3,25 @@ import java.util.Scanner;
 public class CurrentAccount extends BankAccount //inheritance
 {
 	private double balance = 400; //current balance stored in the database. The system computes and updates after user transaction
-	private String name;
-	private int accNo;
-    private final int PIN = 1234; //default PIN  stored in the database can be manipulated by the user
-    private int PIN2;
+	//private String name;
+	//private int accNo;
+    //private final int PIN = 1234; //default PIN  stored in the database can be manipulated by the user
+    //private int PIN2;
     private double deposit;
     private double withdraw;
     Scanner input = new Scanner(System.in);
-    public void pinChecker() {
-    	
-    	System.out.println("*******************************");
-    	System.out.println("I-LAB CURRENT ACCOUNT!..");
-		System.out.println("Enter Account No: ");
-		accNo = input.nextInt();
-		do {
-		System.out.println("Enter PIN: ");
-		PIN2 = input.nextInt();
-		}while(PIN2 != PIN);
-		//input.close();
-	
-    }
+
+	/*
+	 * public void pinChecker() {
+	 * 
+	 * System.out.println("*******************************");
+	 * System.out.println("I-LAB CURRENT ACCOUNT!..");
+	 * System.out.println("Enter Account No: "); accNo = input.nextInt(); do {
+	 * System.out.println("Enter PIN: "); PIN2 = input.nextInt(); }while(PIN2 !=
+	 * PIN); //input.close();
+	 * 
+	 * }
+	 */
 	public CurrentAccount() // this is a constructor
 	{
 		//balance = 0;
